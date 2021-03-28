@@ -15,15 +15,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <visualEffectView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gb9-NC-rxZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sh1-hh-t8g">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYV-99-JYU">
-                                <rect key="frame" x="10" y="770" width="394" height="53"/>
-                                <color key="backgroundColor" red="0.81176470588235294" green="0.12156862745098039" blue="0.15686274509803921" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="10" y="779" width="394" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="I4J-Fj-aMd"/>
                                 </constraints>
-                                <state key="normal" title="Войти">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" red="0.89411764705882346" green="0.13333333333333333" blue="0.1764705882352941" alpha="0.5" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="signInButton:" destination="Fz5-Xb-Da5" eventType="touchUpInside" id="sgv-0F-LIw"/>
@@ -31,11 +41,15 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dW6-sB-ymr"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.78892779235073696" green="1" blue="0.79331538198199514" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dW6-sB-ymr" firstAttribute="bottom" secondItem="lYV-99-JYU" secondAttribute="bottom" constant="39" id="Duw-ZH-Hwr"/>
+                            <constraint firstItem="gb9-NC-rxZ" firstAttribute="trailing" secondItem="dW6-sB-ymr" secondAttribute="trailing" id="0gL-Oa-mbm"/>
+                            <constraint firstItem="gb9-NC-rxZ" firstAttribute="leading" secondItem="dW6-sB-ymr" secondAttribute="leading" id="1If-fc-JKV"/>
                             <constraint firstItem="dW6-sB-ymr" firstAttribute="trailing" secondItem="lYV-99-JYU" secondAttribute="trailing" constant="10" id="Y1r-En-0MT"/>
+                            <constraint firstAttribute="bottom" secondItem="gb9-NC-rxZ" secondAttribute="bottom" id="a0k-0l-NuX"/>
                             <constraint firstItem="lYV-99-JYU" firstAttribute="leading" secondItem="dW6-sB-ymr" secondAttribute="leading" constant="10" id="dDG-GU-7B4"/>
+                            <constraint firstItem="dW6-sB-ymr" firstAttribute="bottom" secondItem="lYV-99-JYU" secondAttribute="bottom" constant="30" id="e0D-q3-JH6"/>
+                            <constraint firstItem="gb9-NC-rxZ" firstAttribute="top" secondItem="o8b-6q-cJF" secondAttribute="top" id="fBF-PM-2c6"/>
                         </constraints>
                     </view>
                     <connections>

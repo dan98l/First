@@ -31,9 +31,9 @@ class HomeScreenViewController: UIViewController, AutoLoadable {
     
     private func settingSignInButton() {
         signInButton.layer.cornerRadius = signInButton.frame.size.height / 2
-        signInButton.layer.shadowRadius = 9
         signInButton.alpha = 0.0
-        
+        signInButton.layer.borderWidth = 1
+        signInButton.layer.borderColor = UIColor.white.withAlphaComponent(0.75).cgColor
         showSignInButtonWithAnimations()
     }
     

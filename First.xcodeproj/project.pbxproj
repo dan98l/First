@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A50C29FF260FA82800BCFCCA /* AuthorizationScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C29FE260FA82800BCFCCA /* AuthorizationScreenViewController.swift */; };
+		A50C2A02260FA85E00BCFCCA /* AuthorizationScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50C2A01260FA85E00BCFCCA /* AuthorizationScreen.storyboard */; };
+		A50C2A05260FA8A200BCFCCA /* AuthorizationScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50C2A04260FA8A200BCFCCA /* AuthorizationScreenViewModel.swift */; };
 		A571B2A5260F8C2000F126B8 /* AutoLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571B2A4260F8C2000F126B8 /* AutoLoadable.swift */; };
 		A571B2A8260F8C2B00F126B8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571B2A7260F8C2B00F126B8 /* AppCoordinator.swift */; };
 		A571B2B2260F8C5A00F126B8 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571B2B0260F8C5A00F126B8 /* HomeCoordinator.swift */; };
 		A571B2B3260F8C5A00F126B8 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A571B2B1260F8C5A00F126B8 /* HomeScreen.storyboard */; };
 		A571B2B8260F8CD600F126B8 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571B2B6260F8CD600F126B8 /* HomeScreenViewController.swift */; };
 		A571B2B9260F8CD600F126B8 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571B2B7260F8CD600F126B8 /* HomeScreenViewModel.swift */; };
+		A5876BC2261068FD00C76385 /* CAGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5876BC1261068FD00C76385 /* CAGradientLayer.swift */; };
 		A5992FC9260F8A4E008B25B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5992FC8260F8A4E008B25B8 /* AppDelegate.swift */; };
 		A5992FCB260F8A4E008B25B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5992FCA260F8A4E008B25B8 /* SceneDelegate.swift */; };
 		A5992FD2260F8A53008B25B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5992FD1260F8A53008B25B8 /* Assets.xcassets */; };
@@ -20,12 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A50C29FE260FA82800BCFCCA /* AuthorizationScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationScreenViewController.swift; sourceTree = "<group>"; };
+		A50C2A01260FA85E00BCFCCA /* AuthorizationScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthorizationScreen.storyboard; sourceTree = "<group>"; };
+		A50C2A04260FA8A200BCFCCA /* AuthorizationScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationScreenViewModel.swift; sourceTree = "<group>"; };
 		A571B2A4260F8C2000F126B8 /* AutoLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLoadable.swift; sourceTree = "<group>"; };
 		A571B2A7260F8C2B00F126B8 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A571B2B0260F8C5A00F126B8 /* HomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		A571B2B1260F8C5A00F126B8 /* HomeScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		A571B2B6260F8CD600F126B8 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		A571B2B7260F8CD600F126B8 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		A5876BC1261068FD00C76385 /* CAGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayer.swift; sourceTree = "<group>"; };
 		A5992FC5260F8A4E008B25B8 /* First.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = First.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5992FC8260F8A4E008B25B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5992FCA260F8A4E008B25B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,9 +53,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A50C29FD260FA81200BCFCCA /* AuthorizationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A50C2A01260FA85E00BCFCCA /* AuthorizationScreen.storyboard */,
+				A50C2A07260FA8D600BCFCCA /* Authorization */,
+			);
+			path = AuthorizationScreen;
+			sourceTree = "<group>";
+		};
+		A50C2A07260FA8D600BCFCCA /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				A50C29FE260FA82800BCFCCA /* AuthorizationScreenViewController.swift */,
+				A50C2A04260FA8A200BCFCCA /* AuthorizationScreenViewModel.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
 		A571B29D260F8B9100F126B8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A571B2A3260F8C1200F126B8 /* Extensions */,
 				A571B29E260F8B9800F126B8 /* Flows */,
 				A571B29F260F8BD000F126B8 /* Resources */,
 			);
@@ -58,8 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				A571B2A7260F8C2B00F126B8 /* AppCoordinator.swift */,
+				A50C29FD260FA81200BCFCCA /* AuthorizationScreen */,
 				A571B2AE260F8C5000F126B8 /* HomeScreen */,
-				A571B2A3260F8C1200F126B8 /* Extensions */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -92,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				A571B2A4260F8C2000F126B8 /* AutoLoadable.swift */,
+				A5876BC1261068FD00C76385 /* CAGradientLayer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,6 +230,7 @@
 			files = (
 				A571B2B3260F8C5A00F126B8 /* HomeScreen.storyboard in Resources */,
 				A5992FD5260F8A53008B25B8 /* LaunchScreen.storyboard in Resources */,
+				A50C2A02260FA85E00BCFCCA /* AuthorizationScreen.storyboard in Resources */,
 				A5992FD2260F8A53008B25B8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,11 +243,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A571B2A8260F8C2B00F126B8 /* AppCoordinator.swift in Sources */,
+				A5876BC2261068FD00C76385 /* CAGradientLayer.swift in Sources */,
 				A5992FC9260F8A4E008B25B8 /* AppDelegate.swift in Sources */,
 				A571B2B9260F8CD600F126B8 /* HomeScreenViewModel.swift in Sources */,
 				A571B2B2260F8C5A00F126B8 /* HomeCoordinator.swift in Sources */,
+				A50C29FF260FA82800BCFCCA /* AuthorizationScreenViewController.swift in Sources */,
 				A5992FCB260F8A4E008B25B8 /* SceneDelegate.swift in Sources */,
 				A571B2A5260F8C2000F126B8 /* AutoLoadable.swift in Sources */,
+				A50C2A05260FA8A200BCFCCA /* AuthorizationScreenViewModel.swift in Sources */,
 				A571B2B8260F8CD600F126B8 /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

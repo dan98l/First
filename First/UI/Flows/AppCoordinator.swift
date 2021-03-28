@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AppCoordinator: HomeCoordinatorlDelegate {
+class AppCoordinator: AuthorizationScreenViewModelDelegate {
     
     // MARK: - Properties
     
@@ -21,20 +21,33 @@ class AppCoordinator: HomeCoordinatorlDelegate {
     init(window: UIWindow) {
         self.window = window
         homeCoordinator = HomeCoordinator(navigationController: navigationController)
-        homeCoordinator.delegate = self
     }
     
     func start() {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-        showHomeScreen()
+        showAuthorizationScreen()
+    }
+    
+    private func showAuthorizationScreen() {
+        let authorizationScreenViewModel = AuthorizationScreenViewModel()
+        authorizationScreenViewModel.delegate = self
+        
+        let authorizationScreenViewController = AuthorizationScreenViewController.instantiate(from: "AuthorizationScreen")
+        authorizationScreenViewController.viewModel = authorizationScreenViewModel
+        
+        navigationController.pushViewController(authorizationScreenViewController, animated: true)
     }
     
     private func showHomeScreen() {
         homeCoordinator.start()
     }
     
-    func signIn() {
+    func didTapSignInButton(_ viewModel: AuthorizationScreenViewModel) {
+        signIn()
+    }
+    
+    private func signIn() {
         print("signIn")
     }
 }
