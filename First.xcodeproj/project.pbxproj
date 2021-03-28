@@ -21,6 +21,7 @@
 		A5992FCB260F8A4E008B25B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5992FCA260F8A4E008B25B8 /* SceneDelegate.swift */; };
 		A5992FD2260F8A53008B25B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5992FD1260F8A53008B25B8 /* Assets.xcassets */; };
 		A5992FD5260F8A53008B25B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5992FD3260F8A53008B25B8 /* LaunchScreen.storyboard */; };
+		A59BF67C26107618006A8608 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59BF67B26107618006A8608 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		A5992FD1260F8A53008B25B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5992FD4260F8A53008B25B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5992FD6260F8A53008B25B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A59BF67B26107618006A8608 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				A5992FD1260F8A53008B25B8 /* Assets.xcassets */,
 				A5992FD3260F8A53008B25B8 /* LaunchScreen.storyboard */,
 				A5992FD6260F8A53008B25B8 /* Info.plist */,
+				A59BF67B26107618006A8608 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A59BF67C26107618006A8608 /* GoogleService-Info.plist in Resources */,
 				A571B2B3260F8C5A00F126B8 /* HomeScreen.storyboard in Resources */,
 				A5992FD5260F8A53008B25B8 /* LaunchScreen.storyboard in Resources */,
 				A50C2A02260FA85E00BCFCCA /* AuthorizationScreen.storyboard in Resources */,
