@@ -8,17 +8,37 @@
 import UIKit
 
 class AuthorizationScreenViewController: UIViewController, AutoLoadable {
-    
+
     // MARK: - IBOutlets
+    
+    @IBOutlet var authorizationLabel: UILabel!
+    @IBOutlet var accountLabel: UILabel!
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    @IBAction func done(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
     
     @IBAction func signInButton(_ sender: Any) {
-        viewModel.didTapSignInButton()
+        if let viewModel = viewModel {
+            viewModel.didTapSignInButton()
+        }
+    }
+    
+    @IBAction func signUpButton(_ sender: Any) {
+        if let viewModel = viewModel {
+            if viewModel.authorization() {
+                settingSignIn()
+            } else {
+                settingSignUp()
+            }
+        }
     }
     
     // MARK: - Properties
@@ -30,12 +50,33 @@ class AuthorizationScreenViewController: UIViewController, AutoLoadable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        swipeDownSetting()
         settingSignInButton()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    private func swipeDownSetting() {
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(hideKeyboardOnSwipeDown))
+        swipeDown.delegate = self
+        swipeDown.direction =  UISwipeGestureRecognizer.Direction.down
+        self.view.addGestureRecognizer(swipeDown)
+    }
+    
+    @objc private func hideKeyboardOnSwipeDown() {
+        view.endEditing(true)
+    }
+    
+    private func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     private func settingSignInButton() {
-        
-        
         signInButton.layer.cornerRadius = signInButton.frame.size.height / 2
         signInButton.alpha = 0.0
         signInButton.layer.borderWidth = 1
@@ -49,10 +90,23 @@ class AuthorizationScreenViewController: UIViewController, AutoLoadable {
         })
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+    private func settingSignIn() {
+        authorizationLabel.text = "Вход"
+        accountLabel.text = "Нет аккаунта?"
+        signInButton.setTitle("Войти", for: .normal)
+        signUpButton.setTitle("Зарегистрироваться", for: .normal)
+    }
+    
+    private func settingSignUp() {
+        authorizationLabel.text = "Регистрация"
+        accountLabel.text = "Уже есть аккаунт?"
+        signInButton.setTitle("Зарегистрироваться", for: .normal)
+        signUpButton.setTitle("Войти", for: .normal)
     }
 }
 
+extension AuthorizationScreenViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+}
